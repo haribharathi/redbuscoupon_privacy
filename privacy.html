@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — redBus Coupon Finder</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 680px;
+      margin: 48px auto;
+      padding: 0 24px;
+      color: #222;
+      line-height: 1.7;
+    }
+    h1 { color: #d84e55; font-size: 24px; margin-bottom: 4px; }
+    h2 { font-size: 16px; margin-top: 32px; color: #333; }
+    p, li { font-size: 15px; color: #444; }
+    ul { padding-left: 20px; }
+    .updated { font-size: 13px; color: #888; margin-top: 4px; }
+    footer { margin-top: 48px; font-size: 13px; color: #aaa; border-top: 1px solid #eee; padding-top: 16px; }
+  </style>
+</head>
+<body>
+
+  <h1>redBus Coupon Finder</h1>
+  <p class="updated">Privacy Policy &mdash; Last updated: October 2026</p>
+
+  <p>
+    redBus Coupon Finder is a Chrome extension that helps you find working coupon codes
+    on redBus payment pages. This policy explains what data the extension accesses, why,
+    and what happens to it.
+  </p>
+
+  <h2>What data is accessed</h2>
+  <ul>
+    <li>
+      <strong>redBus order information (browser cookie):</strong> The extension reads a
+      redBus session cookie (<code>COResp</code> / <code>updatedCOResp</code>) that contains
+      your current booking details (route, journey date, seat). This data is used
+      <em>locally in your browser</em> to test whether a coupon applies to your booking.
+      It is never sent to our servers.
+    </li>
+    <li>
+      <strong>Coupon codes you submit:</strong> If you use the "Suggest a coupon" feature,
+      the coupon code and whether it worked is sent to our backend to be added to the shared
+      coupon list. No personal information (name, email, account details) is included.
+    </li>
+  </ul>
+
+  <h2>What data is stored on our servers</h2>
+  <p>
+    Only anonymous coupon codes and their aggregate usage counts are stored. No personal
+    data, no account information, and no browsing history is ever stored or transmitted
+    to our servers.
+  </p>
+
+  <h2>Third-party services</h2>
+  <p>
+    To test whether a coupon is valid, the extension calls redBus's own order API
+    (<code>redbus.in</code>) using your existing session. This is the same request
+    redBus makes when you apply a coupon manually. No data is shared with any other
+    third party.
+  </p>
+
+  <h2>Permissions used and why</h2>
+  <ul>
+    <li><strong>activeTab:</strong> Required to read the current payment page and detect
+    when you are on a redBus booking page.</li>
+    <li><strong>host_permissions for redbus.in:</strong> Required to run the coupon-testing
+    content script on redBus pages.</li>
+    <li><strong>host_permissions for our backend:</strong> Required for the background
+    service worker to fetch the coupon list and submit suggested codes without CORS
+    restrictions.</li>
+  </ul>
+
+  <h2>Data sharing</h2>
+  <p>We do not sell, trade, or share any data with third parties.</p>
+
+  <h2>Contact</h2>
+  <p>
+    For questions or concerns about this privacy policy, please open an issue on the
+    <a href="https://github.com/haribharathi/redbuscoupon">GitHub repository</a>.
+  </p>
+
+  <footer>
+    &copy; 2026 redBus Coupon Finder. This extension is not affiliated with redBus.
+  </footer>
+
+</body>
+</html>
